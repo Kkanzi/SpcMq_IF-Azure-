@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DsiMq_IF.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="connectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=localhost;Initial Catalog=DISPC_HY;persist security info=True; Integrated Security=SSPI;</Value>
+    </Setting>
+    <Setting Name="CustomerCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JQI62fq8EqUFFgwIfAqC97MIyoM6bkvyqGL7ASgn60N72dYuYR8WJQxd7Yr9TxiLMSnTB7ObTCQFDVOoP1PTY8hbiZQCr9zsXI52ZMN5jpG4JeMK+WE2s0+nFJJE1CT9WoMSi/ikESF7Ma8R5Uh/eFQEQ/uUwy+OA0ZpWsKN4pw=</Value>
+    </Setting>
+    <Setting Name="KeyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">yj4moYLtvqBIMWabgwIzU9kKn4yJH0hfzutHXbUG8YWlwKsjgwYsb7+A7gYKwXeAtb/c/v21bt2Y1k7OIZOaFtusE4yZ0zw/FWObTH0jP9wD9wBj9SXonwtXOJWsHTXije9RL5b8Zml0Wpi1CLoou7SWmGF14nUl9K41UgyRjbI=</Value>
+    </Setting>
+    <Setting Name="NameSpace" Type="System.String" Scope="User">
+      <Value Profile="(Default)">B76pWa4k+tHio4+EzwtF0YFxp3cJLQuIDCBBIA7HjVd7+JpFvUcpqjCsCCJ/VWk6LS+eoFf3anC6FZhqxnZ6BrxZEYYcC2Dmb6sYqWI5hOpeMetlU/r3nDIqlS0qLILSeoBvI7isgWeikr+5XBZTrPlqPUH0J7pGlJMmGEzB4/s=</Value>
+    </Setting>
+    <Setting Name="ServerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ZNCvS8RaEbcxEMjEJKDhrBYnxUwRn1fyo15/kMtRuBU688HYMJY/iT8I9QuCXG4I7kINXEtMCQy1W0uHvr6/FGkhjWH6+SRrM6ajMCLWXXkb78u8+a9ulCGT2g25kZ19IEfhnEPcfM8ckhJI/ooqnJW1/EcfMBCWFDca6zaw6/I=</Value>
+    </Setting>
+    <Setting Name="topicName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5Q1pqGxuVMGh6TzHwNJoA8wY6wyu42F1B1O3l1FA9G6ZrSLoRIsYmjaR8VJ4wubOu0Au22OOIxqmm0ok0SYP/yt7AVPFRZT/zTTdWNVIPYX4pbUYEkGMVxuu2WEFOnTGZkv6BOKKiZnDE/wctMvbLFAJvIEsGIiUidKM0N15Dnc=</Value>
+    </Setting>
+    <Setting Name="standardKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">u1rJf4KS37pbbljuUhcD2/F9nSu13ZWkf0DTdnqysqORT0AgIaN5b0EEHYFdZa3pRRmFz3C46C77IX+t3svQ4BfyBDyqi5VO42U1btV4xiBQj8GdNO40rwP+3S3ePYEwu8e7qWYt0Eyw1HkZ/tWSfPRIOyX77CmxgtMy/BHCcF4=</Value>
+    </Setting>
+    <Setting Name="measureKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sLd97JvLU1ZwtT0Fqbtd+CLeurFt469f2z3iAaX0ytLyb/jdnl0BR467EFW9EINpVaa2aRxuvFicQd1nu9fpTiay43FFsaxQ9lT8wYCUBWGBVwvcpmPUQuBMEjFKE0QFKxF+n6GvAJHX10tRQ8NUUHu7IogjHkdg62Vr4GO7ATc=</Value>
+    </Setting>
+    <Setting Name="StatKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GjQA72YZL9Ltx3a+/Vb6BNhvtt1CWNdNahKnNhO//sZvh+Xnyj19YjnbUvNIGHgie3AtLqW2UXcAdLSblsSSd49ZXojla8lcdsEs7+RLd2/96lKgLFIx6If0HEF7QCLCjUevl91cDcknSZNBuhRJh8qH99dBT4jMXKZrXcJxwjI=</Value>
+    </Setting>
+    <Setting Name="BadKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CqW7abfewIFniuGFKfHhf31zNVDMHrABufMPBy6GO7jY4wSDvp4VUyGkvQoL6cxofyEr12MZh7AIrMRjdzSVSLY0tHuly7EnIbvXYO2DcLhfwJZWeMORV876CfhbU3oIXsRu/bMzl5ZqaWANGZ62sZZ/ZWCzNoh/uaNcyxcAD7A=</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

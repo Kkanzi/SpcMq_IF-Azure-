@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsJobList" targetNamespace="http://tempuri.org/dsJobList.xsd" xmlns:mstns="http://tempuri.org/dsJobList.xsd" xmlns="http://tempuri.org/dsJobList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsJobList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsJobList" msprop:Generator_UserDSName="dsJobList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtSetting" msprop:Generator_TableClassName="dtSettingDataTable" msprop:Generator_TableVarName="tabledtSetting" msprop:Generator_TablePropName="dtSetting" msprop:Generator_RowDeletingName="dtSettingRowDeleting" msprop:Generator_RowChangingName="dtSettingRowChanging" msprop:Generator_RowEvHandlerName="dtSettingRowChangeEventHandler" msprop:Generator_RowDeletedName="dtSettingRowDeleted" msprop:Generator_UserTableName="dtSetting" msprop:Generator_RowChangedName="dtSettingRowChanged" msprop:Generator_RowEvArgName="dtSettingRowChangeEvent" msprop:Generator_RowClassName="dtSettingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GUBUN" msprop:Generator_ColumnVarNameInTable="columnGUBUN" msprop:Generator_ColumnPropNameInRow="GUBUN" msprop:Generator_ColumnPropNameInTable="GUBUNColumn" msprop:Generator_UserColumnName="GUBUN" type="xs:string" minOccurs="0" />
+              <xs:element name="IDX" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnIDX" msprop:Generator_ColumnPropNameInRow="IDX" msprop:Generator_ColumnPropNameInTable="IDXColumn" msprop:Generator_UserColumnName="IDX" type="xs:string" minOccurs="0" />
+              <xs:element name="NAME" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="JOB" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnJOB" msprop:Generator_ColumnPropNameInRow="JOB" msprop:Generator_ColumnPropNameInTable="JOBColumn" msprop:Generator_UserColumnName="JOB" type="xs:string" minOccurs="0" />
+              <xs:element name="SEC" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnSEC" msprop:Generator_ColumnPropNameInRow="SEC" msprop:Generator_ColumnPropNameInTable="SECColumn" msprop:Generator_UserColumnName="SEC" type="xs:string" minOccurs="0" />
+              <xs:element name="USEYN" msprop:Generator_ColumnVarNameInTable="columnUSEYN" msprop:Generator_ColumnPropNameInRow="USEYN" msprop:Generator_ColumnPropNameInTable="USEYNColumn" msprop:Generator_UserColumnName="USEYN" type="xs:string" minOccurs="0" />
+              <xs:element name="EXTFILE" msprop:Generator_ColumnVarNameInTable="columnEXTFILE" msprop:Generator_ColumnPropNameInRow="EXTFILE" msprop:Generator_ColumnPropNameInTable="EXTFILEColumn" msprop:Generator_UserColumnName="EXTFILE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

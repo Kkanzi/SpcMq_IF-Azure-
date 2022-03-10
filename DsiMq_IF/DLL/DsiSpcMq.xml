@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DsiSpcMq</name>
+    </assembly>
+    <members>
+        <member name="T:DsiSpcMq.DsiSpcMq">
+            <summary>
+            두산 Message Queue Library
+            </summary>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            내부에서 리소스 사용금지X, 외부 Config에서 파라미터로 받기위한 클래스 객체 선언
+            clsRabbit 사용 안함
+            </summary>
+            <param name="TokenUrl">토큰발급URL</param>
+            <param name="NameSpace">Azure네임스페이스</param>
+            <param name="KeyName">Azure ConnectString의 KeyName</param>
+            <param name="Key">Azure ConnectString의 Key</param>
+            <param name="TopicName">Azure Topic명</param>
+            <param name="StandardKey">Azure Topic으로 던질 기준정보 메세지의 필터명</param>
+            <param name="MeasureKey">Azure Topic으로 던질 측정데이터 메세지의 필터명</param>
+            <param name="StatKey">Azure Topic으로 던질 통계데이터 메세지의 필터명</param>
+            <param name="BadKey">Azure Topic으로 던질 불량데이터 메세지의 필터명</param>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncInspectData(System.String,System.Data.DataTable)">
+            <summary>
+            측정데이터 전송<para/>
+            lotId(string), factId(string), procId(string), lineId(string), godsId(string), inspId(string), seq(int), <para/> inspectDt(datetime), inspectData(decimal), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncDeptInfo(System.String,System.Data.DataTable)">
+            <summary>
+            부서코드 전송 <para/>
+            deptId(string), nameK(string), nameE(string), nameC(string), nameJ(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncFactInfo(System.String,System.Data.DataTable)">
+            <summary>
+            공장코드전송 <para/>
+            factId(string), nameK(string), nameE(string), nameC(string), nameJ(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncProcInfo(System.String,System.Data.DataTable)">
+            <summary>
+            공정정보 전송 <para/>
+            procId(string), nameK(string), nameE(string), nameC(string), nameJ(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncLineInfo(System.String,System.Data.DataTable)">
+            <summary>
+            라인(설비)정보 전송 <para/>
+            lineId(string), nameK(string), nameE(string), nameC(string), nameJ(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncGoodsInfo(System.String,System.Data.DataTable)">
+            <summary>
+            품번정보 전송 <para/>
+            godsID(string), nameK(string), nameE(string), nameC(string), nameJ(string), division(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncInspectInfo(System.String,System.Data.DataTable)">
+            <summary>
+            검사항목 전송 <para/>
+            inspId(string), nameK(string), nameE(string), nameC(string), nameJ(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), crud(char), idxKey(int)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncGoodsInspect(System.String,System.Data.DataTable)">
+            <summary>
+            스펙정보 전송 <para/>
+            <para>factId(string), procId(string), lineId(string), godsId(string), inspId(string),</para> 
+            <para>unit(string), unitNameK(string), unitNameE(string), unitNameJ(string), unitNameC(string), dataType(string), dataTypeNameK(string), dataTypeNameE(string), dataTypeNameJ(string), dataTypeNameC(string),</para> 
+            <para> quaType(char), sampleSize(int), chartCode(string), specLower(decimal), specMid(decimal), specUpper(decimal),</para> 
+            <para> lopl(decimal), opl(decimal), uopl(decimal), rlopl(decimal), ropl(decimal), ruopl(decimal), cpCpkUse(string), oplYn(char),</para> 
+            <para> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string),</para> 
+            <para> useYn(char), crud(char), idxKey(int) </para>
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncOCAPInfo(System.String,System.Data.DataTable)">
+            <summary>
+            OCAP 전송 <para/>
+            groupCode(string), groupNameK(string), groupNameE(string), groupNameJ(string), groupNameC(string), code(string), codeNameK(string), codeNameE(string), codeNameJ(string), codeNameC(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), idxKey(int), crud(char)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncSpecOutActionInfo(System.String,System.Data.DataTable)">
+            <summary>
+            불량조치유형정보 전송 <para/>
+            groupCode(string), groupNameK(string), groupNameE(string), groupNameJ(string), groupNameC(string), code(string), codeNameK(string), codeNameE(string), codeNameJ(string), codeNameC(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), idxKey(int), crud(char)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncSpecOutFinalPointInfo(System.String,System.Data.DataTable)">
+            <summary>
+            최종현품처리정보 전송 <para/>
+            groupCode(string), groupNameK(string), groupNameE(string), groupNameJ(string), groupNameC(string), code(string), codeNameK(string), codeNameE(string), codeNameJ(string), codeNameC(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), idxKey(int), crud(char)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncSpecOutNameInfo(System.String,System.Data.DataTable)">
+            <summary>
+            불량명정보 전송<para/>
+            groupCode(string), groupNameK(string), groupNameE(string), groupNameJ(string), groupNameC(string), code(string), codeNameK(string), codeNameE(string), codeNameJ(string), codeNameC(string), <para/> insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), useNChangedDt(datetime), useNChangedUserId(string), useNChangedUserName(string), <para/> useYn(char), idxKey(int), crud(char)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns>성공여부</returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncAbnormalList(System.String,System.Data.DataTable)">
+            <summary>
+            이상점 발생 전송<para/>
+            lotId(string), factId(string), procId(string), lineId(string), godsId(string), inspId(string), inspectDt(datetime), <para/>abnormalType(string), abnormalActionCode(string), abnormalActionName(string), checkPointCode(string), checkPointName(string), treatYn(char), <para/> crud(char), idxKey(int), insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), <para/> treatYChangedDt(datetime), treatYChangedUserId(string), treatYChangedUserName(string)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncSpecOutList(System.String,System.Data.DataTable)">
+            <summary>
+            스펙아웃정보 전송<para/>
+            lotId(string), factId(string), procId(string), lineId(string), godsId(string), inspId(string), inspectDt(datetime), specLower(decimal), specMid(decimal), specUpper(decimal), <para/> specoutType(string), checkPointCode(string),<para/> treatYn(char), insertDt(datetime), updateDt(datetime), insertUserId(string), insertUserName(string), updateUserId(string), updateUserName(string), crud(char), idxKey(int), treatYChangedDt(datetime), treatYChangedUserId(string), treatYChangedUserName(string)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsiSpcMq.DsiSpcMq.syncStatData(System.String,System.Data.DataTable)">
+            <summary>
+            통계치 데이터 전송<para/>
+            processindexYear(string(4)), processindexMonth(string(2)), processindexWeek(string(2)), processindexDay(string(2)), <para/>factId(string), procId(string), lineId(string), godsId(string), inspId(string), specLower(decimal), specMid(decimal), specUpper(decimal), <para/>lcl(decimal), cl(decimal), ucl(decimal), rcl(decimal), rucl(decimal), oplYn(char), processindexCp(decimal), processindexCpk(decimal), processindexPp(decimal), processindexPpk(decimal),<para/> samplesize(int), average(decimal), stddev(decimal), variance(decimal), crud(char), idxKey(int), rawNumber(string)
+            </summary>
+            <param name="businessNo">업체코드</param>
+            <param name="dtData">DataTable</param>
+            <returns></returns>
+        </member>
+        <member name="T:DsiSpcMq.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.Key">
+            <summary>
+              JQI62fq8EqUFFgwIfAqC97MIyoM6bkvyqGL7ASgn60N72dYuYR8WJQxd7Yr9TxiLMSnTB7ObTCQFDVOoP1PTY8hbiZQCr9zsXI52ZMN5jpG4JeMK+WE2s0+nFJJE1CT9WoMSi/ikESF7Ma8R5Uh/eFQEQ/uUwy+OA0ZpWsKN4pw=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.KeyName">
+            <summary>
+              yj4moYLtvqBIMWabgwIzU9kKn4yJH0hfzutHXbUG8YWlwKsjgwYsb7+A7gYKwXeAtb/c/v21bt2Y1k7OIZOaFtusE4yZ0zw/FWObTH0jP9wD9wBj9SXonwtXOJWsHTXije9RL5b8Zml0Wpi1CLoou7SWmGF14nUl9K41UgyRjbI=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.NameSpace">
+            <summary>
+              B76pWa4k+tHio4+EzwtF0YFxp3cJLQuIDCBBIA7HjVd7+JpFvUcpqjCsCCJ/VWk6LS+eoFf3anC6FZhqxnZ6BrxZEYYcC2Dmb6sYqWI5hOpeMetlU/r3nDIqlS0qLILSeoBvI7isgWeikr+5XBZTrPlqPUH0J7pGlJMmGEzB4/s=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.Password">
+            <summary>
+              do1xtOBNbuBxO+h4EfwydqwsQnzoYLMUf5j3D3qyJktYseS+qr9cjKp6+r7A7CSNKs0YfRTfiU4XBlVR27oSww16oQW8rqE2U0WdrdvW3di7tVu5kWdYLgfi5NeiMuh6dKb98lzA6ZAqnIjRe5QrZLPhH3QzCdRp3cOmhJYetmc=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesBasicInfo">
+            <summary>
+              VeC0xyia+rqw73tsvByyjAUF3X7ka/s0EgbVnZPJiJgB8841hJX1ROLmzzJNGLKKPRusp9CLlzEWrpDq3msRpPxYfu6IMlE7P833iOel1jNhEH98gliOWzdG3rOYo3N7th7lgFOzOyRCHcgxvZlIEZnyRfjODcdmUvmEz8f3cxc=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesLegacy">
+            <summary>
+              fkE8esEIB7KzXr0kFY5vUYJlrxqKpMEhNAoUntK8RuHdtmGuKCTc3HwAsC6xH1/kCBlScnf+gGA0ICYCeOMOO2JO/LPFQ0YpApMfK13obiXWRXjKDON1LqIIpDpTW33zKlXuWGH3e5OdoGUPzNLuqTbAY4j/DS5sWrM3y2ABVFM=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesMeasureOne">
+            <summary>
+              2ZLd7bZDHbTDrPsAddZBc9WVijG7cqaqCPaEd6U0DJc+1UNcAlTCowTcqjB1hbtaAMJHv0Wlw548PtrNht9gJK+DZ/GM63qH727IGmvDvENnl+lD1H8ATBJWXVDlQDRJXLRjPk1dnnptU3K8ROH+EpgeclezhB8n/5TVdoZchnI=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesMeasureThree">
+            <summary>
+              xcqY7v6HwQG6p+h7IiyM94rGmxfozydrfj/CRJVPcK0Yh90ojU+qQplLFCJdrtKalFis/g5SnxjpIUW6T7pcUqE61S+iCt+a5A7XSUbbg+sI+IEgansygLDArsxScfNmLDKb9qyOBwViN7gNUzvS2+MqFkTDETarED4c/0anar4=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesMeasureTwo">
+            <summary>
+              v8LAwqmgzpZXvbA+RKFtvfMo7srGAJkCeRarsGUR7VNv8f5RV3nvv6Bl0M54vXR+UP0LzQOrhzd4NqpqFpK75LQhWjjjFnbG2mWLgAK7dvSW6YIB7ifjfu0yfhiuA7rZQtbXmvq3x90H61p4m0B1N0++VTobRL/AjnaBXR+YKqU=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesStatOne">
+            <summary>
+              Q3ULyWZVZw8vm72r+gXiZWEKQHTp/+eSjbsrr77G5P9XzQOCmbeKppCtbaMSY3c9p4YHvsu+08WODPO05PytJs1agDb28rYWksXlMklOSSHhNNqeKER+vQ3jHqHF+FP2ldcAQY1FmmLJXJQEKUd80Iz1W0paa8vbUioj63OX/Q8=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesStatThree">
+            <summary>
+              58A4J6Gvv/FiIt5+EVIjeX/XPXZH92FYNl4+I/PMMMTcwfXHZttu63NpI8r6bB7gFOxYC+JaFQTbQNk9lIm8h6eL8hW8XyDEycv3Ierma2BmkM2SIDpsXO2J6Fh11h9jYjpiaETxSB0qgxENon42xIzvqwWHVZZ1GMBJLUk1OkE=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.QueuesStatTwo">
+            <summary>
+              MQNW6sEzNMbCIjy9lCKtibsZuKDvhscCHdNBX7eCdVXtGDmBKLW+iHJ03wVYaIeQfH7yh4NO8xhRHAbTI4rag1tYtYwPsSqJ2E17h+JmpNsUl6ISMuFLkiw6t4e4U5nUSQE18oAgg6ul8quZMVxs/xZ4coSZ1icshux+6gD/mio=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyBasicInfo">
+            <summary>
+              ro76IO4c93fxcE44fs6gnKiJqkqqnWtnlS+SgCoNybrFiFP1/HbDrXtdJYH5wmiTC4tEMtf8IOKL3P828/4q8xJb+IJ8XWTEq0KuXwgbBhWgtXXEvfvY+Ns5lQSTcW4AmYUn4XTxrswqDXWBHm64C9BlD3bqzLPF2AmQ6Sln5JA=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyLegacy">
+            <summary>
+              XkaoV4YTqMpjrESUMSwmKGSFwIURIVuTfvUO+jpTEx5qrBZ3XoxeddF+ZazWHDOgxEsnff0DSXmEHI9fLGD1BKaslqs203bPXa3/AAFXA0Su790Jmyx+FZeapxCwzXof6CQCqmVhfJFzeECi/b5gUgWeaCgaF4aWOqKYSjHn4/o=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyMeasureOne">
+            <summary>
+              znV3nHzYkAORyCn6IMDF1c8OsDMcMoTcrydHD9gqgYoAoHXAILaXlGW6UBQDFK0vD/wYy7+jFSD0a3PkVMcKHCym1ENzEGcwESjWuyI7kWjwSpJ6Mi4RrxqlSg6CUp+XMI6mcDHmJfvO6MX74NHPNat98lSr/DqIEVktnqepbgw=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyMeasureThree">
+            <summary>
+              bxwGR1iD+YbX9v6nTIsvtke2nET46W3NR1+M7eXZGSJCCuPKW8BI7itr+M+JIylhVzy22/UWlS3c22445QyR517fsd1Q9d5WhNZLNbKqYGtxBeIaZsLNv5yNc+syWSPuoS2dP7zZQ2fpVz0bND31MPAGE89X/5uwN8W3JQMOrfg=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyMeasureTwo">
+            <summary>
+              FgUNcVmi0PACLYXcpmHOCXklcMLK/Fw+PXUf0TXdod7zXDVH8qJ0Ct42IwSOk9vc9JaY+9pyxGOHrKZK7zxnLyGj35+OCO4XBJU6e/CBuN0XeGRQySVIkwC3c1rp1z1OMwftnVMAcXxjMQkULhHw3ZmB+SO/wPZq9gdL5EdgGdA=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyStatOne">
+            <summary>
+              251NVoVp3AUT4iEASF7bkWBvobB0fDqm34qO8nAmR0o2fkerabyDS6J2zyeozGs1YeGCNuv/0Ksnq/Kcaf1nkBGdP9EtbnBqpYQH9uM+yj7jV0bWeqTcbZjOUAbFgNo9tVe7GI5g4dIu7aBRUrUzZ74lbpMap9WMaySFbZ/CqoU=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyStatThree">
+            <summary>
+              xWhEXnG1mVCmdN1MW6m6/Bgsktjwmb6ti90YC6rhgUY9yCmcYL2RfNq6RgQYYNPTs2qHUF4jx8ikO7PkkfyUePel3sziJWkJbBFRVK2vDxbzvqi7CHxuBCWzMCnV3jTv9kjFGON+h/rZaXRvaaA5WemgmmuB7dL8Lg5kqwsWZjI=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingKeyStatTwo">
+            <summary>
+              I+H4TLnRplMfyjtcLBIAMzWFTUkFLMQvDByOPKXPvv5Wh5J7OC+G3csbvp10K7Zg5g2wGsAwHjcBBQUEfO9227q8Z6iF1Pq5oHAdPvKcq2xl+6mXgw5OfZuRaI84dvUC3zrzglzgLRVWMdZ3TZrFIpwjLNuO290IMQ/tysiVqhw=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingPatternBasicInfo">
+            <summary>
+              3TBUArdb2H/pYhNTfwwA0W2z492RqMbebhsOBRRfVdHxk69rAdNpoWGSrrOWFxsUjrtKm7n4X3rQP0mMYnnWMOHOZBCPw8QG23ugT6oFRiZDBsDnvArzlUMERyRiVMnYyv2WZ/qrWFTAP71qrYjdLTI8ZZ/Yfb3m59dTwelWaV8=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingPatternLegacy">
+            <summary>
+              fcyB6BIh5bZFY4LWRfx+oS5izH+jT/jVqB1Ed7QOudPxbNG5eIVth6VBnLh8PULyRIfLor6zW/2wrW6no3rTtfqW0ek4YHw1HqGoE4GRcbd91T0z/+Etg5uN4pgFm+yy8AfwBZAFg0PWo5VcR+C8tPApEjNqMe0isww5meLd6s0=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingPatternMeasure">
+            <summary>
+              hyIYODhSDp3Wjw0lrnRZ7eHIT4sP8vrvO/fvfRoVmZ0OI8weDNjUXXEqZ+CKhlzqqqFuzcYhRKoSHu1GRWZiKYzYx6dNh7RAAeT8mZppUAsguKpJeQKgMr3Btiy1lfF2Wt1asSyaRSIrWehzidrnhdU9GZXfO+M+Eo3YijWTcv4=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.RoutingPatternStat">
+            <summary>
+              MEBo9FrMbJLohb2tZQtnRqHmz9t8iQZSuTNtn9o05OSTsbryPpesxWUaTPBJXfQGaXHiAllfSxHytqACrkWEYYf3XZP6kkns1kZtjPXtWy8546TYPCEXyGnK1tXYy6bBpocgFxWgrPH+2t7oVss4joCheWM7PH60QY2ufa4u2MA=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.ServerHostName">
+            <summary>
+              3tAmPwiPl26M4a7rAVmjqM2XKyP1Se98uFhwhXVoUGjzJlJwDUeYYBqRA/lukSc5kxFaIhoaGY7CAiZRGlbmxWyBtBmR0PXi1ovJnx3mcli6Qw2/riyAnw0B6rjHFmu0o0AIi6E0UgnRW9HspcjDTIxbFjGSL22xZafzFdyd4Po=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.ServerPort">
+            <summary>
+              Hh6nyOjjKlPKAUxFiMpM8wri2LomAjVQDx8IdNIqwIbpgv/iIXCsPYMMeotB7FiRYYBnbt7JIDGD9gfZx6neITDlIcjG+/+0kuogCvz9P5qFD9s9xq/xTgbo4e9unO4lUm6b8ykm2AJ+Io0QEPc+UGCVcc3T9w/jcqBVGNE/Jk8=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.ServerUrl">
+            <summary>
+              ZNCvS8RaEbcxEMjEJKDhrBYnxUwRn1fyo15/kMtRuBU688HYMJY/iT8I9QuCXG4I7kINXEtMCQy1W0uHvr6/FGkhjWH6+SRrM6ajMCLWXXkb78u8+a9ulCGT2g25kZ19IEfhnEPcfM8ckhJI/ooqnJW1/EcfMBCWFDca6zaw6/I=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.topicName">
+            <summary>
+              5Q1pqGxuVMGh6TzHwNJoA8wY6wyu42F1B1O3l1FA9G6ZrSLoRIsYmjaR8VJ4wubOu0Au22OOIxqmm0ok0SYP/yt7AVPFRZT/zTTdWNVIPYX4pbUYEkGMVxuu2WEFOnTGZkv6BOKKiZnDE/wctMvbLFAJvIEsGIiUidKM0N15Dnc=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+        <member name="P:DsiSpcMq.Properties.Resources.UserName">
+            <summary>
+              SkYmLrKl0uaZO9VEDfq53gpm2fKywc7ggmZ82Im1h5xiJK5v9Ez6LfVI2Kb8/tc/hRZ3bDKfCR68vhTnGMVtIRnOKaa4VIlschLZ4LMuyT/0oMEVpVwpTa91Jb3H3eDTKkNf3nCO3MoP/oKyYwIjy2PqRJBG1yOx0fGeh9hty98=과(와) 유사한 지역화된 문자열을 찾습니다.
+            </summary>
+        </member>
+    </members>
+</doc>
